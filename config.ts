@@ -1,0 +1,1 @@
+export const slackClientSecret = 'e76625327e5f9585b56f8c7ae5666ea3';
