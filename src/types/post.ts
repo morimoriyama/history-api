@@ -12,5 +12,5 @@ export type TPostRes = {
   }];
   postedAt: Date;
   media: string; // e.g. "slack"
-  sourceUrl: string; // e.g. "https://aidemy.slack.com/archives/C02HH1NL9/p1552718218082500"
+  sourceUrl: string;
 };
