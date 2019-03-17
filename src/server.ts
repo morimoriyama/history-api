@@ -1,12 +1,12 @@
 // server.js
 
 // install packages
-import express from 'express';
-import bodyParser = require('body-parser');
+import express from "express";
+import bodyParser = require("body-parser");
 import timeout = require("connect-timeout");
-import * as routes from './router';
+import * as routes from "./router";
 
-// application
+// init application
 const app: express.Application = express();
 
 // set timeout
@@ -22,14 +22,14 @@ app.use(bodyParser.json())
 
 // set response header　
 app.use((_req: express.Request, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*')
+  res.header("Access-Control-Allow-Origin", "*")
   res.header(
-    'Access-Control-Allow-Headers',
-    'Origin, X-Requested-With, Content-Type, Accept'
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
   )
   res.header(
-    'Access-Control-Allow-Methods',
-    'GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS'
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS"
   )
   next()
 })
@@ -39,7 +39,7 @@ var port = process.env.PORT || 8080;
 
 routes.init(app);
 
-// サーバ起動
+// start server
 app.listen(port);
 
-// console.log('listen on port: ' + port)
+console.log("listen on port: " + port);

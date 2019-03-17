@@ -7,4 +7,4 @@
 - `npm install` # install dependencies
 - `npm run build` # build
 - `npm run start` # start (listining on: http://localhost:8080/)
-- `npm run deploy` # deploy
+- `gcloud app deploy` # deploy (need to install `gcloud`)
