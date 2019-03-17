@@ -69,7 +69,7 @@ const extractSlackPosts = (messages: WebAPICallResult["messages"]) => {
       return 0;
     })
     .filter((_message: any, index: number) => {
-      return index < 32;
+      return index < 40;
     });
 
   const extractedSourcePosts = messages
@@ -91,7 +91,7 @@ const extractSlackPosts = (messages: WebAPICallResult["messages"]) => {
       return 0;
     })
     .filter((_message: any, index: number) => {
-      return index < 32;
+      return index < 40;
     });
   const extractedPosts = extractedTextPosts
     .concat(extractedSourcePosts)
